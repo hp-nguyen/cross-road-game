@@ -47,7 +47,8 @@
     },
     "_is3DNode": true,
     "groupIndex": 0,
-    "_id": "c8SvQ/xmhH65MHVI6Vf7U+"
+    "autoReleaseAssets": false,
+    "_id": "e937a613-9c2e-496a-9177-b8bba29cf037"
   },
   {
     "__type__": "cc.Node",
@@ -71,13 +72,16 @@
       },
       {
         "__id__": 14
+      },
+      {
+        "__id__": 33
       }
     ],
     "_active": true,
     "_level": 1,
     "_components": [
       {
-        "__id__": 33
+        "__id__": 35
       }
     ],
     "_prefab": null,
@@ -161,7 +165,7 @@
       "__type__": "cc.Vec3",
       "x": 0,
       "y": 0,
-      "z": 407.8979651824706
+      "z": 248.54929088613392
     },
     "_scale": {
       "__type__": "cc.Vec3",
@@ -348,15 +352,15 @@
     },
     "_position": {
       "__type__": "cc.Vec3",
-      "x": 0.044,
-      "y": 13.15,
+      "x": -83.249,
+      "y": 12.784,
       "z": 0
     },
     "_scale": {
       "__type__": "cc.Vec3",
-      "x": 2.254,
-      "y": 2.254,
-      "z": 2.254
+      "x": 0.8,
+      "y": 0.8,
+      "z": 1
     },
     "_eulerAngles": {
       "__type__": "cc.Vec3",
@@ -413,7 +417,10 @@
     "_defaultClip": null,
     "_clips": [
       {
-        "__uuid__": "719c18e8-9f87-411d-aab2-1b1b5735b02d"
+        "__uuid__": "1e3d9d60-c014-4d09-ba4b-513023eec271"
+      },
+      {
+        "__uuid__": "dbb91549-bdfe-4240-b5dd-f2ccb7babf1d"
       },
       {
         "__uuid__": "104c29a4-be6b-41ab-8be4-1dddf664ff1b"
@@ -430,8 +437,9 @@
       "__id__": 7
     },
     "_enabled": false,
-    "speed": 80,
+    "speed": 70,
     "anim": null,
+    "isColliding": false,
     "_id": "bbxtJg6sxII4H/7/acdyxJ"
   },
   {
@@ -540,7 +548,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "TrafficeLight",
+    "_name": "TrafficLight",
     "_objFlags": 0,
     "_parent": {
       "__id__": 2
@@ -1368,6 +1376,80 @@
       }
     ],
     "_id": "e7JfTpYXxK2prNocNJSuXg"
+  },
+  {
+    "__type__": "cc.Node",
+    "_name": "CollisionChecker",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 2
+    },
+    "_children": [],
+    "_active": true,
+    "_level": 2,
+    "_components": [
+      {
+        "__id__": 34
+      }
+    ],
+    "_prefab": null,
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 0,
+      "height": 0
+    },
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_position": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_scale": {
+      "__type__": "cc.Vec3",
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "_eulerAngles": {
+      "__type__": "cc.Vec3",
+      "x": 0,
+      "y": 0,
+      "z": 0
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_is3DNode": false,
+    "groupIndex": 0,
+    "_id": "c3wO72/q1K750x+Xm5nwQ5"
+  },
+  {
+    "__type__": "e8c20J7ks9JZY9l9ZXbUbKr",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 33
+    },
+    "_enabled": true,
+    "spriteA": {
+      "__id__": 7
+    },
+    "spriteB": {
+      "__id__": 11
+    },
+    "_id": "0bhb4PLOFNGbke4FG+qmwJ"
   },
   {
     "__type__": "cc.Canvas",
