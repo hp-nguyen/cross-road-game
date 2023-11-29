@@ -1,0 +1,1 @@
+Ride_01.png.png 24 124, Ride_02.png.png 216 124, Ride_03.png.png 408 124, Ride_04.png.png 600 124, Ride_05.png.png 792 124, Ride_06.png.png 984 124, Ride_07.png.png 1176 124, Ride_08.png.png 1368 124.

@@ -12,24 +12,13 @@ cc.Class({
   extends: cc.Component,
 
   properties: {
-    speed: 50,
-    anim: cc.Animation,
-  },
-
-  onLoad() {
-    this.anim = this.node.getComponent(cc.Animation);
-    this.anim.play('dragonMove');
+    speed: 100,
   },
 
   start() {},
-  move(dt) {
-    if (this.node.y <= -70) {
-      this.anim.play('Death');
-      this.node.color = cc.Color.GRAY;
-      return;
-    }
 
-    this.node.y += -this.speed * dt;
+  move(dt) {
+    this.node.x += this.speed * dt;
   },
   update(dt) {
     this.move(dt);

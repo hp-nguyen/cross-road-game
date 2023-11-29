@@ -18,6 +18,7 @@ cc.Class({
     blinkInterval: 0.2, // Interval between blinks (in seconds)
     totalBlinks: 3, // Total number of blinks
     dragon: cc.Sprite,
+    car: cc.Sprite,
   },
 
   onLoad() {
@@ -54,7 +55,13 @@ cc.Class({
         this.timer = 0;
       }
     }
-
+    if (this.node.name === 'GreenLamp') {
+      this.turnOn();
+      this.isStable = true;
+      this.dragon.getComponent('Dragon').enabled = true;
+      this.car.getComponent('Car').enabled = true;
+      return;
+    }
     if (this.blinking) {
       this.timer += dt;
 
@@ -72,11 +79,6 @@ cc.Class({
         if (this.blinkCount >= this.totalBlinks * 2) {
           this.blinking = false;
           this.turnOff();
-          if (this.node.name === 'GreenLamp') {
-            this.dragon.getComponent('Dragon').enabled = true;
-            this.turnOn();
-            this.isStable = true;
-          }
         }
       }
     }
