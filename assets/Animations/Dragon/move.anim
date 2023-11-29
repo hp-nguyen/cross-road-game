@@ -1,11 +1,11 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "dragonMove",
+  "_name": "move",
   "_objFlags": 0,
   "_native": "",
-  "_duration": 0.06666666666666667,
-  "sample": 60,
-  "speed": 0.1,
+  "_duration": 1,
+  "sample": 4,
+  "speed": 2,
   "wrapMode": 2,
   "curveData": {
     "comps": {
@@ -14,23 +14,23 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "3a68052f-f4ac-4347-b0ec-dcf507809fd8"
-            }
-          },
-          {
-            "frame": 0.016666666666666666,
-            "value": {
               "__uuid__": "ce7f8735-68fe-4162-bc4b-52944e514338"
             }
           },
           {
-            "frame": 0.03333333333333333,
+            "frame": 0.25,
+            "value": {
+              "__uuid__": "3a68052f-f4ac-4347-b0ec-dcf507809fd8"
+            }
+          },
+          {
+            "frame": 0.5,
             "value": {
               "__uuid__": "220b41cf-94ba-4d47-b98e-e9c67a875402"
             }
           },
           {
-            "frame": 0.05,
+            "frame": 0.75,
             "value": {
               "__uuid__": "5716ebbf-f230-4301-ab6c-91d48b6b11ec"
             }

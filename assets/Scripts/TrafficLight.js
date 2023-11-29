@@ -1,13 +1,3 @@
-// Learn cc.Class:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
   extends: cc.Component,
 
@@ -25,15 +15,15 @@ cc.Class({
   },
   update(dt) {
     this.timer += dt;
-    if (this.timer >= 2) {
+    if (this.timer >= 2.5) {
       this.redLamp.active = false;
       this.yellowLamp.active = true;
     }
-    if (this.timer >= 4) {
+    if (this.timer >= 5) {
       this.yellowLamp.active = false;
       this.greenLamp.active = true;
     }
-    if (this.timer >= 6) {
+    if (this.timer >= 7.5) {
       this.greenLamp.active = true;
     }
   },

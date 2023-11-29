@@ -1,22 +1,12 @@
-// Learn cc.Class:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://docs.cocos2d-x.org/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] https://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
-
 cc.Class({
   extends: cc.Component,
 
   properties: {
     colorOn: cc.Color,
     colorOff: cc.Color,
-    totalTimeOn: 1, // Total time for the light to be on (in seconds)
-    blinkInterval: 0.2, // Interval between blinks (in seconds)
-    totalBlinks: 3, // Total number of blinks
+    totalTimeOn: 1,
+    blinkInterval: 0.2,
+    totalBlinks: 3,
     dragon: cc.Sprite,
     car: cc.Sprite,
   },
@@ -46,15 +36,6 @@ cc.Class({
 
   update(dt) {
     if (this.isStable) return;
-    if (this.lightOn && !this.blinking) {
-      this.timer += dt;
-      // Turn off the light after totalTimeOn
-      if (this.timer >= this.totalTimeOn) {
-        this.blinkCount = 0;
-        this.blinking = true;
-        this.timer = 0;
-      }
-    }
     if (this.node.name === 'GreenLamp') {
       this.turnOn();
       this.isStable = true;
@@ -62,10 +43,20 @@ cc.Class({
       this.car.getComponent('Car').enabled = true;
       return;
     }
+    if (this.lightOn && !this.blinking) {
+      this.timer += dt;
+
+      if (this.timer >= this.totalTimeOn) {
+        this.turnOff();
+        this.blinkCount = 0;
+        this.blinking = true;
+        this.timer = 0;
+      }
+    }
+
     if (this.blinking) {
       this.timer += dt;
 
-      // Blink every blinkInterval seconds
       if (this.timer >= this.blinkInterval) {
         if (this.lightOn) {
           this.turnOff();
@@ -75,7 +66,6 @@ cc.Class({
         this.timer = 0;
         this.blinkCount++;
 
-        // Turn off the blinking after the specified number of blinks
         if (this.blinkCount >= this.totalBlinks * 2) {
           this.blinking = false;
           this.turnOff();
