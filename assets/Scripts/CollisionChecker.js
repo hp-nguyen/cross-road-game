@@ -14,9 +14,12 @@ cc.Class({
 
     let radiusA = this.spriteA.width / 2;
     let radiusB = this.spriteB.width / 2;
-
+    cc.log(distance, radiusA + radiusB);
     if (distance < radiusA + radiusB) {
-      this.spriteA.getComponent('Dragon').isColliding = true;
+      if (!this.spriteA.getComponent('Golem').isColliding) {
+        this.spriteA.getComponent('Golem').isColliding = true;
+        this.spriteA.getComponent('Golem').anim.play('dying');
+      }
     }
   },
 });
