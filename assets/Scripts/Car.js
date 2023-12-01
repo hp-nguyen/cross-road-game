@@ -1,10 +1,5 @@
 cc.Class({
-  extends: cc.Component,
-
-  properties: {
-    speed: 100,
-    sprite: cc.Sprite,
-  },
+  extends: require('Entity'),
   onLoad() {
     this.spriteAnim = this.sprite.getComponent(cc.Animation)
   },

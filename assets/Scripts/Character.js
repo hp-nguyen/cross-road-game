@@ -1,12 +1,5 @@
 cc.Class({
-  extends: cc.Component,
-
-  properties: {
-    speed: 50,
-    sprite: cc.Sprite,
-    isMoving: false,
-  },
-
+  extends: require('Entity'),
   onLoad() {
     this.spriteAnim = this.sprite.getComponent(cc.Animation);
     this.spriteAnim.play('idle');

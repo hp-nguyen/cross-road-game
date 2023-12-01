@@ -583,6 +583,7 @@
     "sprite": {
       "__id__": 12
     },
+    "isMoving": false,
     "_id": "cfcTdmWqxPw5lVdYNanxkM"
   },
   {
