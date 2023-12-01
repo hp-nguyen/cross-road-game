@@ -1,9 +1,11 @@
 cc.Class({
   extends: require('Entity'),
   onLoad() {
-    this.spriteAnim = this.sprite.getComponent(cc.Animation)
+    this.spriteAnim = this.sprite.getComponent(cc.Animation);
   },
-  start() {},
+  start() {
+    this.node.getComponent(cc.AudioSource).play();
+  },
 
   move(dt) {
     this.node.x += this.speed * dt;

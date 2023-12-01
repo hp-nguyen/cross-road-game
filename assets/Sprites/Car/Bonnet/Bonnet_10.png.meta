@@ -1,6 +1,6 @@
 {
   "ver": "2.3.3",
-  "uuid": "797c599b-d843-43fc-84f2-1e22250fdc71",
+  "uuid": "97816112-2954-4c99-9366-b020234af9df",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -9,10 +9,10 @@
   "packable": true,
   "platformSettings": {},
   "subMetas": {
-    "Destroyed_02": {
+    "Bonnet_10": {
       "ver": "1.0.4",
-      "uuid": "c6b37cac-52de-443c-9844-d39149140be8",
-      "rawTextureUuid": "797c599b-d843-43fc-84f2-1e22250fdc71",
+      "uuid": "3d6dd635-22ca-4f67-8074-2581a53cf632",
+      "rawTextureUuid": "97816112-2954-4c99-9366-b020234af9df",
       "trimType": "auto",
       "trimThreshold": 1,
       "rotated": false,
@@ -20,9 +20,9 @@
       "offsetY": 0,
       "trimX": 0,
       "trimY": 0,
-      "width": 151,
+      "width": 144,
       "height": 68,
-      "rawWidth": 151,
+      "rawWidth": 144,
       "rawHeight": 68,
       "borderTop": 0,
       "borderBottom": 0,
