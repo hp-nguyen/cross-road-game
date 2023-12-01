@@ -7,14 +7,12 @@ cc.Class({
     totalTimeOn: 1,
     blinkInterval: 0.2,
     totalBlinks: 3,
-    character: cc.Node,
-    car: cc.Node,
   },
 
   onLoad() {
     this.node.color = this.colorOff;
     this.timer = 0;
-    this.lightOn = false;
+    this.isLightOn = false;
     this.isBlinking = false;
     this.isStable = false;
     this.blinkCount = 0;
@@ -24,26 +22,8 @@ cc.Class({
     this.turnOn();
   },
 
-  turnOn() {
-    this.lightOn = true;
-    this.node.color = this.colorOn;
-  },
-
-  turnOff() {
-    this.lightOn = false;
-    this.node.color = this.colorOff;
-  },
-
   update(dt) {
-    if (this.isStable) return;
-    if (this.node.name === 'GreenLamp') {
-      this.turnOn();
-      this.isStable = true;
-      this.character.getComponent('Character').enabled = true;
-      this.car.getComponent('Car').enabled = true;
-      return;
-    }
-    if (this.lightOn && !this.isBlinking) {
+    if (this.isLightOn && !this.isBlinking) {
       this.timer += dt;
 
       if (this.timer >= this.totalTimeOn) {
@@ -56,10 +36,20 @@ cc.Class({
 
     if (this.isBlinking) this.blink(dt);
   },
+  turnOn() {
+    this.isLightOn = true;
+    this.node.color = this.colorOn;
+  },
+
+  turnOff() {
+    this.isLightOn = false;
+    this.node.color = this.colorOff;
+  },
+
   blink(dt) {
     this.timer += dt;
     if (this.timer >= this.blinkInterval) {
-      if (this.lightOn) {
+      if (this.isLightOn) {
         this.turnOff();
       } else {
         this.turnOn();
