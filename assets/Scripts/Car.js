@@ -4,7 +4,7 @@ cc.Class({
     this.spriteAnim = this.sprite.getComponent(cc.Animation);
   },
   start() {
-    this.node.getComponent(cc.AudioSource).play();
+    // this.node.getComponent(cc.AudioSource).play();
   },
 
   move(dt) {

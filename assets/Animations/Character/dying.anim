@@ -185,5 +185,16 @@
       ]
     }
   },
-  "events": []
+  "events": [
+    {
+      "frame": 0,
+      "func": "onHit",
+      "params": []
+    },
+    {
+      "frame": 0.2,
+      "func": "onDeath",
+      "params": []
+    }
+  ]
 }
