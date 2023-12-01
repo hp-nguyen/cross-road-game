@@ -7,8 +7,8 @@ cc.Class({
     totalTimeOn: 1,
     blinkInterval: 0.2,
     totalBlinks: 3,
-    golem: cc.Node,
-    car: cc.Sprite,
+    character: cc.Node,
+    car: cc.Node,
   },
 
   onLoad() {
@@ -39,7 +39,7 @@ cc.Class({
     if (this.node.name === 'GreenLamp') {
       this.turnOn();
       this.isStable = true;
-      this.golem.getComponent('Golem').enabled = true;
+      this.character.getComponent('Character').enabled = true;
       this.car.getComponent('Car').enabled = true;
       return;
     }

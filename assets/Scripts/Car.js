@@ -3,8 +3,11 @@ cc.Class({
 
   properties: {
     speed: 100,
+    sprite: cc.Sprite,
   },
-
+  onLoad() {
+    this.spriteAnim = this.sprite.getComponent(cc.Animation)
+  },
   start() {},
 
   move(dt) {

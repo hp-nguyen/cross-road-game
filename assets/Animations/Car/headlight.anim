@@ -1,11 +1,11 @@
 {
   "__type__": "cc.AnimationClip",
-  "_name": "idle",
+  "_name": "headlight",
   "_objFlags": 0,
   "_native": "",
   "_duration": 1,
   "sample": 3,
-  "speed": 1.5,
+  "speed": 3,
   "wrapMode": 2,
   "curveData": {
     "comps": {
@@ -14,19 +14,19 @@
           {
             "frame": 0,
             "value": {
-              "__uuid__": "94698841-c280-4708-8e73-bb382b16f9f5"
+              "__uuid__": "0d125781-c47b-45ba-a4f8-4a34c342b25c"
             }
           },
           {
             "frame": 0.3333333333333333,
             "value": {
-              "__uuid__": "1a90a56e-a551-4d05-af10-fdf1a784fd42"
+              "__uuid__": "63f4536f-482f-4030-8303-cb9423bb4533"
             }
           },
           {
             "frame": 0.6666666666666666,
             "value": {
-              "__uuid__": "0fda9cbe-668c-4f62-91e7-6062c3dce094"
+              "__uuid__": "c2741ded-6541-4367-a516-8aaa8dca2165"
             }
           }
         ]

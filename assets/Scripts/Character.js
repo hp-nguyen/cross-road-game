@@ -3,24 +3,23 @@ cc.Class({
 
   properties: {
     speed: 50,
-    anim: cc.Animation,
-    isColliding: false,
+    sprite: cc.Sprite,
+    isMoving: false,
   },
 
   onLoad() {
-    this.anim = this.node.getChildByName('Golem').getComponent(cc.Animation);
-    this.anim.play('idle');
+    this.spriteAnim = this.sprite.getComponent(cc.Animation);
+    this.spriteAnim.play('idle');
     this.distanceScale = 1 - 0.7;
     this.speedScale = this.distanceScale / 5;
   },
 
   start() {
-    this.anim.play('walking');
+    this.spriteAnim.play('walking');
+    this.isMoving = true;
   },
   move(dt) {
-    if (this.isColliding) {
-      return;
-    }
+    if (!this.isMoving) return;
     this.node.y += -this.speed * dt;
     this.node.x += -this.speed * dt;
     this.node.scale += this.speedScale * dt;
