@@ -7,21 +7,21 @@ cc.Class({
     greenLight: cc.Node,
   },
   onLoad() {
-    this.redLightComponent = this.redLight.getComponent('RedLight');
-    this.yellowLightComponent = this.yellowLight.getComponent('YellowLight');
-    this.greenLightComponent = this.greenLight.getComponent('GreenLight');
+    this.redLightScript = this.redLight.getComponent('RedLight');
+    this.yellowLightScript = this.yellowLight.getComponent('YellowLight');
+    this.greenLightScript = this.greenLight.getComponent('GreenLight');
+    this.timer = 0;
   },
   start() {
-    this.timer = 0;
-    this.redLightComponent.enabled = true;
+    this.redLightScript.enabled = true;
   },
   update(dt) {
     this.timer += dt;
     if (this.timer >= 2.5) {
-      this.yellowLightComponent.enabled = true;
+      this.yellowLightScript.enabled = true;
     }
     if (this.timer >= 5) {
-      this.greenLightComponent.enabled = true;
+      this.greenLightScript.enabled = true;
     }
   },
 });

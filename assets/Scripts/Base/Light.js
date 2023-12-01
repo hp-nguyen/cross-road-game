@@ -14,28 +14,9 @@ cc.Class({
     this.timer = 0;
     this.isLightOn = false;
     this.isBlinking = false;
-    this.isStable = false;
     this.blinkCount = 0;
   },
 
-  start() {
-    this.turnOn();
-  },
-
-  update(dt) {
-    if (this.isLightOn && !this.isBlinking) {
-      this.timer += dt;
-
-      if (this.timer >= this.totalTimeOn) {
-        this.turnOff();
-        this.blinkCount = 0;
-        this.isBlinking = true;
-        this.timer = 0;
-      }
-    }
-
-    if (this.isBlinking) this.blink(dt);
-  },
   turnOn() {
     this.isLightOn = true;
     this.node.color = this.colorOn;

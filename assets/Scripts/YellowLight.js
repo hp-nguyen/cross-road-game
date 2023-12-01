@@ -1,3 +1,3 @@
 cc.Class({
-  extends: require('Light'),
+  extends: require('RedLight'),
 });
